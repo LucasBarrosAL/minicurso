@@ -11,7 +11,11 @@ import android.view.View;
 import com.example.lucasbarros.moviesminicurso.databinding.ActivityMain2Binding;
 
 
-public class Main2Activity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
+
+    public static Intent createIntent(Context context) {
+        return new Intent(context, LoginActivity.class);
+    }
 
     ActivityMain2Binding binding;
 
@@ -36,9 +40,9 @@ public class Main2Activity extends AppCompatActivity {
         String email = binding.email.getText().toString();
         String password = binding.password.getText().toString();
 
-        SharedPreferences sharedPreferences = this.getPreferences(Context.MODE_PRIVATE);
+        SharedPreferences sharedPreferences = this.getSharedPreferences(Constants.PREFS, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("prefEmail", email);
+        editor.putString(Constants.PREF_EMAIL, email);
         editor.putString("prefPassword", password);
         editor.commit();
 

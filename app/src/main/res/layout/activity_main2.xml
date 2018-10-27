@@ -3,7 +3,7 @@
     <data>
         <import type="android.view.View"/>
 
-        <variable name="act" type="com.example.lucasbarros.moviesminicurso.Main2Activity"/>
+        <variable name="act" type="com.example.lucasbarros.moviesminicurso.LoginActivity"/>
         <variable name="label" type="String"/>
 
     </data>
