@@ -15,11 +15,10 @@ public class Main2Activity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        binding = DataBindingUtil.setContentView(this, R.layout.activity_main2);
-        setContentView(R.layout.activity_main2);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main2);
+//        setContentView(R.layout.activity_main2);
 
 //        EditText editText = (EditText) findViewById(R.id.email);
-        binding.email.setText("texttstasdasdasd asd ajkl sdasd");
         binding.setAct(this);
         binding.setLabel("IFSC");
         binding.login.setOnClickListener(new View.OnClickListener() {
